@@ -1,0 +1,43 @@
+name: Sync Strava rides
+
+on:
+  schedule:
+    # 6:23 AM New York time (11:23 UTC in winter; 7:23 AM in summer)
+    - cron: '23 11 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: strava-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch rides from Strava
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: node scripts/fetch-strava.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/rides.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "strava-sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/rides.json
+          git commit -m "Update rides from Strava"
+          git push

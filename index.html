@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Albert Rinehart</title>
+  <meta name="description" content="Albert Rinehart lives and works in New York City. Senior Financial Analyst at Warner Music Group, builder of Mise, and cyclist.">
+  <meta property="og:title" content="Albert Rinehart">
+  <meta property="og:description" content="Albert Rinehart lives and works in New York City.">
+  <meta property="og:url" content="https://albertrinehart.com/">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="canonical" href="https://albertrinehart.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/main.js" defer></script>
+</head>
+<body class="toggleable">
+  <div class="wrap">
+
+    <header class="site-header">
+      <a class="wordmark" href="/">ALBERT RINEHART, <span class="italic">New York City.</span></a>
+      <button type="button" class="toggle" id="toggle" aria-label="Toggle between Read and Index views" aria-pressed="false">
+        <span class="read-label">Read</span><span class="muted">/</span><span class="index-label">Index</span>
+      </button>
+    </header>
+
+    <!-- READ VIEW -->
+    <main class="view-read">
+      <div class="blurb">
+        <p>Albert Rinehart lives and works in New York City.</p>
+        <p>He is a Senior Financial Analyst at <a href="https://www.wmg.com" target="_blank" rel="noopener">Warner Music Group</a>, focused on Recorded Music.</p>
+        <p>He graduated from <a href="https://www.osu.edu" target="_blank" rel="noopener">The Ohio State University</a>’s <a href="https://fisher.osu.edu" target="_blank" rel="noopener">Fisher College of Business</a> with a B.S.B.A. and a minor in Environment, Economy, Development, and Sustainability.</p>
+        <p>Before that, he ran <a href="https://www.instagram.com/retailorresale/" target="_blank" rel="noopener">@retailorresale</a>, a sneaker page on Instagram that reached a million people a week at its peak.</p>
+        <p>Now he is building <a href="/mise/">Mise</a>, a private, zero-based budgeting app for iPhone.</p>
+        <p>In his free time, he rides and races bikes around New York City. <span class="fake-link">Here’s the latest.</span></p>
+      </div>
+    </main>
+
+    <!-- INDEX VIEW -->
+    <main class="view-index index-main">
+
+      <section class="row-section">
+        <h2 class="label">Work</h2>
+        <div class="rows">
+          <div class="row"><span>Senior Financial Analyst, <a class="italic" href="https://www.wmg.com" target="_blank" rel="noopener">Warner Music Group</a></span><span class="meta">Dec 2025–Now</span></div>
+          <div class="row"><span>Financial Analyst, <a class="italic" href="https://www.wmg.com" target="_blank" rel="noopener">Warner Music Group</a></span><span class="meta">2024–2025</span></div>
+          <div class="row"><span>Accountant I, <a class="italic" href="https://www.express.com" target="_blank" rel="noopener">Express</a></span><span class="meta">2023–2024</span></div>
+          <div class="row"><span>B.S.B.A., Finance, <a class="italic" href="https://fisher.osu.edu" target="_blank" rel="noopener">Ohio State, Fisher College of Business</a> <span class="muted">· Minor in Environment, Economy, Development, and Sustainability</span></span><span class="meta">2019–2023</span></div>
+        </div>
+      </section>
+
+      <section class="row-section">
+        <h2 class="label">Projects</h2>
+        <div class="rows">
+          <a class="row" href="/mise/"><span>Mise <span class="italic muted">— zero-based budgeting for iPhone. No bank connections; nothing leaves the phone.</span></span><span class="meta" style="color: var(--fg)">In progress</span></a>
+          <a class="row" href="https://www.instagram.com/retailorresale/" target="_blank" rel="noopener"><span>@retailorresale <span class="italic muted">— a sneaker page on Instagram that reached a million people a week at its peak.</span></span><span class="meta">2018–2022</span></a>
+          <div class="row"><span>albertrinehart.com <span class="italic muted">— this site. Rides sync from Strava every morning.</span></span><span class="meta">2026</span></div>
+        </div>
+      </section>
+
+      <section class="row-section" id="rides">
+        <h2 class="label">Rides</h2>
+        <div class="rows">
+          <div class="stats">
+            <div class="stat"><span class="stat-value" data-count="all_miles">—</span><span class="stat-label">miles, all time</span></div>
+            <div class="stat"><span class="stat-value" data-count="ytd_miles">—</span><span class="stat-label">miles this year</span></div>
+            <div class="stat"><span class="stat-value" data-count="week_miles">—</span><span class="stat-label">miles this week</span></div>
+            <div class="stat"><span class="stat-value" data-count="ytd_elevation_ft">—</span><span class="stat-label">feet climbed this year</span></div>
+          </div>
+          <div class="ride-list" id="ride-list"></div>
+          <!-- Strava requires its official "Powered by Strava" logo where Strava data appears.
+               Download it from https://developers.strava.com/guidelines/ and save as /assets/powered-by-strava.svg -->
+          <div class="attribution">
+            <img src="/assets/powered-by-strava.svg" alt="Powered by Strava" onerror="this.remove()">
+            <span data-ride="updated"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="row-section">
+        <h2 class="label">Elsewhere</h2>
+        <div class="rows inline-links">
+          <a href="https://www.linkedin.com/in/albertrinehart/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:albertrinehart@gmail.com">Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-email">
+      <a href="mailto:albertrinehart@gmail.com">albertrinehart@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
