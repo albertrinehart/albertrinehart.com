@@ -1,10 +1,12 @@
 {
-  "updated_at": "2026-11-27T02:27:37.636Z",
+  "updated_at": "2026-11-27T03:32:36.911Z",
   "week_miles": 27,
   "ytd_miles": 6349,
   "ytd_elevation_ft": 228684,
   "ytd_rides": 268,
+  "ytd_hours": 370,
   "all_miles": 11782,
+  "all_elevation_ft": 422953,
   "all_rides": 594,
   "recent": [
     {
@@ -14,6 +16,7 @@
       "miles": 27.3,
       "elevation_ft": 1125,
       "moving_time_s": 5590,
+      "avg_watts": 222,
       "type": "Ride"
     },
     {
@@ -23,6 +26,7 @@
       "miles": 31,
       "elevation_ft": 1299,
       "moving_time_s": 6510,
+      "avg_watts": 176,
       "type": "Ride"
     },
     {
@@ -32,6 +36,7 @@
       "miles": 27.3,
       "elevation_ft": 1066,
       "moving_time_s": 5521,
+      "avg_watts": 198,
       "type": "Ride"
     },
     {
@@ -41,6 +46,7 @@
       "miles": 27.4,
       "elevation_ft": 1076,
       "moving_time_s": 5436,
+      "avg_watts": 201,
       "type": "Ride"
     },
     {
@@ -50,6 +56,7 @@
       "miles": 27.3,
       "elevation_ft": 1099,
       "moving_time_s": 5522,
+      "avg_watts": 205,
       "type": "Ride"
     },
     {
@@ -59,6 +66,7 @@
       "miles": 17.2,
       "elevation_ft": 0,
       "moving_time_s": 3908,
+      "avg_watts": 191,
       "type": "Ride"
     },
     {
@@ -68,6 +76,7 @@
       "miles": 17.4,
       "elevation_ft": 0,
       "moving_time_s": 3612,
+      "avg_watts": 197,
       "type": "Ride"
     },
     {
@@ -77,6 +86,7 @@
       "miles": 24.9,
       "elevation_ft": 879,
       "moving_time_s": 6067,
+      "avg_watts": 136,
       "type": "Ride"
     },
     {
@@ -86,6 +96,7 @@
       "miles": 25.7,
       "elevation_ft": 1010,
       "moving_time_s": 5201,
+      "avg_watts": 194,
       "type": "Ride"
     },
     {
@@ -95,6 +106,7 @@
       "miles": 25.3,
       "elevation_ft": 1027,
       "moving_time_s": 5027,
+      "avg_watts": 197,
       "type": "Ride"
     }
   ]
