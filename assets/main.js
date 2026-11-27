@@ -54,7 +54,7 @@
       if (target == null) { el.textContent = '—'; return; }
       if (reduceMotion || target === 0) { el.textContent = fmt(target); return; }
 
-      const duration = 1600;
+      const duration = 2600;
       const start = performance.now();
       if (el._raf) cancelAnimationFrame(el._raf);
       const step = (now) => {
