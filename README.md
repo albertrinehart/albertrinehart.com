@@ -30,7 +30,7 @@ Then open http://localhost:8000. (Opening index.html directly won't load the rid
 
 ## Ride stats
 
-The Index view shows miles all time, this year and this week, plus feet climbed this year. Each number counts up from zero when Index opens (skipped for visitors who turn off motion). Totals come from Strava's athlete stats endpoint, so no historical export is needed.
+The Index view shows miles all time, this year and this week, feet climbed this year and all time, and hours ridden this year. Each recent ride lists its average watts when it was recorded with a power meter. Each number counts up from zero when Index opens (skipped for visitors who turn off motion). Totals come from Strava's athlete stats endpoint, so no historical export is needed.
 
 ## Strava sync: one-time setup
 

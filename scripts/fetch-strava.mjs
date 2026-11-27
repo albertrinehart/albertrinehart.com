@@ -3,7 +3,7 @@
 //   STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN
 // Requires Node 20+ (built-in fetch). No dependencies.
 //
-// Privacy: only names, dates, distance, elevation and moving time are saved.
+// Privacy: only names, dates, distance, elevation, moving time and power are saved.
 // No GPS tracks, map polylines or start/end coordinates are written to the site.
 
 import { writeFile, mkdir } from 'node:fs/promises';
@@ -86,7 +86,9 @@ async function main() {
     ytd_miles: round((ytd.distance || 0) / METERS_PER_MILE),
     ytd_elevation_ft: round((ytd.elevation_gain || 0) * FEET_PER_METER),
     ytd_rides: ytd.count || 0,
+    ytd_hours: round((ytd.moving_time || 0) / 3600),
     all_miles: round((all.distance || 0) / METERS_PER_MILE),
+    all_elevation_ft: round((all.elevation_gain || 0) * FEET_PER_METER),
     all_rides: all.count || 0,
     recent: rides.slice(0, 10).map((a) => ({
       id: a.id,
@@ -95,6 +97,8 @@ async function main() {
       miles: round(a.distance / METERS_PER_MILE, 1),
       elevation_ft: round(a.total_elevation_gain * FEET_PER_METER),
       moving_time_s: a.moving_time,
+      // Only rides measured by a power meter; Strava's estimated watts are left out.
+      avg_watts: a.device_watts && a.average_watts ? round(a.average_watts) : null,
       type: a.sport_type || a.type,
     })),
   };
