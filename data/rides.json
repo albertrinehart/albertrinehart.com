@@ -1,10 +1,101 @@
 {
-  "updated_at": null,
-  "week_miles": null,
-  "ytd_miles": null,
-  "ytd_elevation_ft": null,
-  "ytd_rides": null,
-  "all_miles": null,
-  "all_rides": null,
-  "recent": []
+  "updated_at": "2026-11-27T02:27:37.636Z",
+  "week_miles": 27,
+  "ytd_miles": 6349,
+  "ytd_elevation_ft": 228684,
+  "ytd_rides": 268,
+  "all_miles": 11782,
+  "all_rides": 594,
+  "recent": [
+    {
+      "id": 21107460883,
+      "name": "🌕",
+      "date": "2026-11-24T12:07:25Z",
+      "miles": 27.3,
+      "elevation_ft": 1125,
+      "moving_time_s": 5590,
+      "type": "Ride"
+    },
+    {
+      "id": 21076299427,
+      "name": "Cycling",
+      "date": "2026-11-21T19:23:04Z",
+      "miles": 31,
+      "elevation_ft": 1299,
+      "moving_time_s": 6510,
+      "type": "Ride"
+    },
+    {
+      "id": 21058902347,
+      "name": "Cycling",
+      "date": "2026-11-20T12:20:08Z",
+      "miles": 27.3,
+      "elevation_ft": 1066,
+      "moving_time_s": 5521,
+      "type": "Ride"
+    },
+    {
+      "id": 21046941027,
+      "name": "Cycling",
+      "date": "2026-11-19T11:58:42Z",
+      "miles": 27.4,
+      "elevation_ft": 1076,
+      "moving_time_s": 5436,
+      "type": "Ride"
+    },
+    {
+      "id": 21041918048,
+      "name": "Oh",
+      "date": "2026-11-18T23:48:32Z",
+      "miles": 27.3,
+      "elevation_ft": 1099,
+      "moving_time_s": 5522,
+      "type": "Ride"
+    },
+    {
+      "id": 21028888272,
+      "name": "Cycling",
+      "date": "2026-11-17T23:53:57Z",
+      "miles": 17.2,
+      "elevation_ft": 0,
+      "moving_time_s": 3908,
+      "type": "Ride"
+    },
+    {
+      "id": 21008934315,
+      "name": "🫪🫪🫪",
+      "date": "2026-11-16T12:56:43Z",
+      "miles": 17.4,
+      "elevation_ft": 0,
+      "moving_time_s": 3612,
+      "type": "Ride"
+    },
+    {
+      "id": 21003243319,
+      "name": "PP 🤲",
+      "date": "2026-11-15T20:41:10Z",
+      "miles": 24.9,
+      "elevation_ft": 879,
+      "moving_time_s": 6067,
+      "type": "Ride"
+    },
+    {
+      "id": 21003246788,
+      "name": "Cycling",
+      "date": "2026-11-12T00:17:24Z",
+      "miles": 25.7,
+      "elevation_ft": 1010,
+      "moving_time_s": 5201,
+      "type": "Ride"
+    },
+    {
+      "id": 21003241707,
+      "name": "Cycling",
+      "date": "2026-11-09T12:21:55Z",
+      "miles": 25.3,
+      "elevation_ft": 1027,
+      "moving_time_s": 5027,
+      "type": "Ride"
+    }
+  ]
 }
