@@ -26,7 +26,7 @@ Then open http://localhost:8000. (Opening index.html directly won't load the rid
 
 ## Placeholders to fill before launch
 
-- `mise/index.html`: three screenshots in `assets/mise/` (budget.png, accounts.png, reports.png), captured from the iOS Simulator
+- `mise/index.html`: Budget, Accounts and Reports screenshots in every Mise theme, in `assets/mise/` as `<theme>-<screen>.jpg` (720×1566, captured from the iOS Simulator with demo data). Tapping the phones cycles through the themes (`assets/mise.js`).
 
 ## Ride stats
 

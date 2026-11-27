@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/mise.js" defer></script>
 </head>
 <body>
   <div class="wrap">
@@ -45,11 +46,14 @@
       <div><span class="label" style="margin: 0">Status</span><span class="value">In progress</span></div>
     </section>
 
-    <section class="screens" aria-label="Screens">
-      <div class="screen"><img src="/assets/mise/budget.png" alt="Mise Budget screen for November: $1,017.93 unallocated, $4,300 income and $4,162 assigned, with a spending pace chart and an Auto-assign button." width="1206" height="2622"></div>
-      <div class="screen"><img src="/assets/mise/accounts.png" alt="Mise Accounts screen: net worth of $75,976.36, up $14,598.48 over a year, split into assets and debts, with checking, savings and investment accounts listed." width="1206" height="2622" loading="lazy"></div>
-      <div class="screen"><img src="/assets/mise/reports.png" alt="Mise Reports screen, Spending tab: $3,242.75 spent in November, up 3% from last month, with monthly and per-day averages and a daily spending calendar shaded by amount." width="1206" height="2622" loading="lazy"></div>
-    </section>
+    <div class="screens-block">
+      <button type="button" class="label theme-toggle" hidden><span class="theme-name" aria-live="polite">Classic</span> theme · Tap to change</button>
+      <section class="screens" aria-label="Screens">
+        <div class="screen" data-screen="budget"><img src="/assets/mise/classic-budget.jpg" alt="Mise Budget screen for November: $1,017.93 unallocated, $4,300 income and $4,162 assigned, with a spending pace chart and an Auto-assign button." width="720" height="1566"></div>
+        <div class="screen" data-screen="accounts"><img src="/assets/mise/classic-accounts.jpg" alt="Mise Accounts screen: net worth of $75,976.36, up $14,598.48 over a year, split into assets and debts, with checking, savings and investment accounts listed." width="720" height="1566"></div>
+        <div class="screen" data-screen="reports"><img src="/assets/mise/classic-reports.jpg" alt="Mise Reports screen, Spending tab: $3,242.75 spent in November, up 3% from last month, with monthly and per-day averages and a daily spending calendar shaded by amount." width="720" height="1566"></div>
+      </section>
+    </div>
 
     <section class="row-section">
       <h2 class="label" style="padding-top: 10px">Why</h2>
