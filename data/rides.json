@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T03:32:36.911Z",
+  "updated_at": "2026-11-27T03:38:31.744Z",
   "week_miles": 27,
   "ytd_miles": 6349,
   "ytd_elevation_ft": 228684,
@@ -17,7 +17,8 @@
       "elevation_ft": 1125,
       "moving_time_s": 5590,
       "avg_watts": 222,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 270
     },
     {
       "id": 21076299427,
@@ -27,7 +28,8 @@
       "elevation_ft": 1299,
       "moving_time_s": 6510,
       "avg_watts": 176,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 220
     },
     {
       "id": 21058902347,
@@ -37,7 +39,8 @@
       "elevation_ft": 1066,
       "moving_time_s": 5521,
       "avg_watts": 198,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 263
     },
     {
       "id": 21046941027,
@@ -47,7 +50,8 @@
       "elevation_ft": 1076,
       "moving_time_s": 5436,
       "avg_watts": 201,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 254
     },
     {
       "id": 21041918048,
@@ -57,7 +61,8 @@
       "elevation_ft": 1099,
       "moving_time_s": 5522,
       "avg_watts": 205,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 300
     },
     {
       "id": 21028888272,
@@ -67,7 +72,8 @@
       "elevation_ft": 0,
       "moving_time_s": 3908,
       "avg_watts": 191,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 220
     },
     {
       "id": 21008934315,
@@ -77,7 +83,8 @@
       "elevation_ft": 0,
       "moving_time_s": 3612,
       "avg_watts": 197,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 200
     },
     {
       "id": 21003243319,
@@ -87,7 +94,8 @@
       "elevation_ft": 879,
       "moving_time_s": 6067,
       "avg_watts": 136,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 189
     },
     {
       "id": 21003246788,
@@ -97,7 +105,8 @@
       "elevation_ft": 1010,
       "moving_time_s": 5201,
       "avg_watts": 194,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 268
     },
     {
       "id": 21003241707,
@@ -107,7 +116,8 @@
       "elevation_ft": 1027,
       "moving_time_s": 5027,
       "avg_watts": 197,
-      "type": "Ride"
+      "type": "Ride",
+      "best20_watts": 254
     }
   ]
 }
