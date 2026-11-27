@@ -61,6 +61,44 @@ function startOfWeekNY(now = new Date()) {
 
 const round = (n, d = 0) => Math.round(n * 10 ** d) / 10 ** d;
 
+// Best average power over any 20-minute (1,200-second) stretch of a ride.
+// `time` is seconds from the start and `watts` the power at each of those seconds. Devices often
+// record every few seconds, so a gap of up to 10 s keeps the previous reading; longer gaps (stops,
+// auto-pause) count as 0 W. Returns null for rides shorter than 20 minutes.
+const WINDOW_S = 1200;
+const MAX_FILL_S = 10;
+function best20MinWatts(time, watts) {
+  if (!Array.isArray(time) || !Array.isArray(watts) || time.length !== watts.length || time.length === 0) return null;
+  const length = time[time.length - 1] + 1;
+  if (length < WINDOW_S) return null;
+  const perSecond = new Float64Array(length);
+  for (let i = 0; i < time.length; i++) {
+    const w = Number(watts[i]) || 0;
+    const next = i + 1 < time.length ? time[i + 1] : time[i] + 1;
+    const until = next - time[i] <= MAX_FILL_S ? next : time[i] + 1;
+    for (let t = time[i]; t < until; t++) perSecond[t] = w;
+  }
+  let sum = 0;
+  for (let t = 0; t < WINDOW_S; t++) sum += perSecond[t];
+  let best = sum;
+  for (let t = WINDOW_S; t < length; t++) {
+    sum += perSecond[t] - perSecond[t - WINDOW_S];
+    if (sum > best) best = sum;
+  }
+  return round(best / WINDOW_S);
+}
+
+// Downloads only the power and time streams (no GPS) for one ride.
+async function best20ForActivity(id, token) {
+  try {
+    const streams = await api('/activities/' + id + '/streams?keys=watts,time&key_by_type=true', token);
+    return best20MinWatts(streams.time?.data, streams.watts?.data);
+  } catch (err) {
+    console.warn('Could not get power for activity ' + id + ': ' + err.message);
+    return null;
+  }
+}
+
 async function main() {
   const { access_token, athlete } = await getAccessToken();
   const athleteId = athlete?.id ?? (await api('/athlete', access_token)).id;
@@ -102,6 +140,11 @@ async function main() {
       type: a.sport_type || a.type,
     })),
   };
+
+  // Best 20-minute power, one ride at a time, only for rides recorded with a power meter.
+  for (const [i, a] of rides.slice(0, 10).entries()) {
+    output.recent[i].best20_watts = a.device_watts ? await best20ForActivity(a.id, access_token) : null;
+  }
 
   await mkdir('data', { recursive: true });
   await writeFile('data/rides.json', JSON.stringify(output, null, 2) + '\n');

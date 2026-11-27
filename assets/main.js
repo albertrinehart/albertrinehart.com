@@ -91,7 +91,8 @@
           const meta = document.createElement('span');
           meta.className = 'meta';
           meta.textContent = dateLabel(ride.date) + ' · ' + fmt(ride.miles, 1) + ' mi · ' + fmt(ride.elevation_ft) + ' ft · ' +
-            (ride.avg_watts != null ? fmt(ride.avg_watts) + ' W avg · ' : '');
+            (ride.avg_watts != null ? fmt(ride.avg_watts) + ' W avg · ' : '') +
+            (ride.best20_watts != null ? fmt(ride.best20_watts) + ' W 20-min · ' : '');
 
           // Strava's brand guidelines require links back to Strava data to read "View on Strava".
           const link = document.createElement('a');
